@@ -5,6 +5,9 @@ import numpy as np
 import sqlite3
 import os
 
+print("Current working directory:", os.getcwd())
+print("Files in directory:", os.listdir())
+
 app = Flask(__name__)
 model = load_model('face_emotionModel.h5')
 
