@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Face Emotion Detector{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="logo">ED</div>
+      <div>
+        <h1>Face Emotion Detector</h1>
+        <p class="lead">Upload your photo to detect your emotion using AI.</p>
+      </div>
+    </div>
+
+    <form method="post" enctype="multipart/form-data" class="card">
+      <fieldset>
+        <legend>User Information</legend>
+        <label>Full Name:<br>
+          <input name="full_name" type="text"></label><br>
+        <label>Email:<br>
+          <input name="email" type="email"></label>
+      </fieldset>
+
+      <fieldset class="mt-8">
+        <legend>Image Upload</legend>
+        <label>Upload Image:<br>
+          <input name="image" type="file"></label>
+      </fieldset>
+
+      <div class="mt-8">
+        <button class="btn" type="submit">Detect Emotion</button>
+      </div>
+    </form>
+
+    <p class="footer-note">© 2025 Face Emotion Detector</p>
+  </div>
+{% endblock %}
